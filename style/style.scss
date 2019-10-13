@@ -1,0 +1,711 @@
+/*!
+ * Bootstrap Grid v4.3.1 (https://getbootstrap.com/)
+ * Copyright 2011-2019 The Bootstrap Authors
+ * Copyright 2011-2019 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+html {
+    box-sizing: border-box;
+    -ms-overflow-style: scrollbar;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/utilities";
+
+@import "bootstrap/scss/grid";
+
+
+
+
+@import "bootstrap/scss/progress";
+
+.container-fluid {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.header .container-fluid {
+    height: 300px;
+
+
+
+
+}
+
+.header .container-fluid img {
+    width: 100%;
+    height: 300px;
+}
+
+
+.header .title {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+
+
+    h1 {
+        color: white;
+        font-size: 1.75rem;
+    }
+}
+
+
+.container.info .row {
+
+    margin: -140px 0 50px 0;
+
+}
+
+.centering {
+    margin: auto;
+}
+
+.info-card {
+    display: inline-block;
+    position: relative;
+    width: 250px;
+    background-color: rgba(190, 187, 187, 0.75);
+    margin: 10px 20px;
+    padding: 10px;
+    border-radius: 10%;
+}
+
+
+@media (max-width: 991px) {
+
+    .info-card {
+        display: inline-block;
+        position: relative;
+        width: 200px;
+
+        margin: 10px 10px;
+        border-radius: 10%;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .info-card {
+        display: block;
+        position: relative;
+        width: 100%;
+
+        margin: 10px 0;
+        border-radius: 10%;
+    }
+}
+
+.info-card .image {
+    display: flex;
+    margin: 10px 0;
+}
+
+.info-card img {
+    width: 100px;
+    margin: 10px auto;
+}
+
+.info-card .text p {
+
+    margin: 20px 20px;
+    font-size: 1.2em;
+
+}
+
+
+.pBar-container .indicator,
+.pBar-container .pBar {
+    display: inline-block;
+}
+
+.pBar-container .indicator {
+    padding: 0;
+    margin: 0 15px 0 5px;
+    width: 10%;
+
+    p {
+        font-size: 1.2em;
+        color: grey;
+        margin: 0;
+        text-align: center;
+    }
+}
+
+.pBar-container .pBar {
+    padding: 0;
+    margin: 0;
+    width: 80%;
+}
+
+.pBar .progress {
+    position: relative;
+    top: -5px;
+}
+
+.pBar .progress,
+.pBar .progress-bar {
+    height: 2px;
+
+}
+
+
+
+.content .quiz {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.content .question {
+    margin: auto;
+}
+
+.content .question h3 {
+    text-align: center;
+}
+
+.content .answer {
+    margin: 10px auto;
+    position: relative;
+
+    // background-color: purple;
+
+    max-width: 870px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+@media (max-width: 991px) {
+    .content .answer {
+        max-width: 290px;
+    }
+}
+
+.content .answer .instruction-box {
+    width: 100%;
+    //background-color: yellow;
+    text-align: center;
+
+
+    p {
+        font-size: 0.9rem;
+        padding: 5px;
+        margin: 0;
+    }
+}
+
+.content .answer .answer-block {
+    position: relative;
+    width: 290px;
+    //background-color: pink;
+    margin: 30px 0 10px 0;
+    display: flex;
+}
+
+.answer .answer-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    font-weight: bold;
+}
+
+/*
+.content .answer .answer-block.yes {
+    background-color: green;
+}
+
+.content .answer .answer-block.no {
+    background-color: red;
+
+}
+
+.content .answer .answer-block.neutral {
+    background-color: gray;
+}
+*/
+
+
+.content .input-container {
+    display: inline-block;
+    margin: 20px auto 40px auto;
+    position: relative;
+
+
+
+}
+
+
+
+
+.answer-block.no {
+    $input-color: red;
+
+    .answer-title {
+        color: $input-color;
+    }
+
+    .input-container .in-sm {
+        $input-container-wh: 40px;
+        position: absolute;
+        top: -6px;
+        left: -11px;
+
+        input {
+            width: $input-container-wh;
+            height: $input-container-wh;
+            opacity: 0;
+        }
+
+        .checkmark {
+            width: $input-container-wh;
+            height: $input-container-wh;
+            background-color: $input-color;
+            content: " ";
+            border-radius: 50%;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+
+        .checkmark .checked-mark {
+            position: absolute;
+            background-color: white;
+            content: " ";
+            width: $input-container-wh - 6;
+            height: $input-container-wh - 6;
+            margin: 3px 3px 3px 3px;
+            border-radius: 50%;
+        }
+
+        input:checked~.checkmark {
+            .checked-mark {
+                background-color: $input-color;
+            }
+        }
+    }
+
+    .input-container .in-m {
+        $input-container-wh: 50px;
+        position: absolute;
+        top: -13px;
+        left: -27px;
+
+
+
+        input {
+            width: $input-container-wh;
+            height: $input-container-wh;
+            opacity: 0;
+        }
+
+        .checkmark {
+            width: $input-container-wh;
+            height: $input-container-wh;
+            background-color: $input-color;
+            content: " ";
+            border-radius: 50%;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+
+        .checkmark .checked-mark {
+            position: absolute;
+            background-color: white;
+            content: " ";
+            width: $input-container-wh - 6;
+            height: $input-container-wh - 6;
+            margin: 3px 3px 3px 3px;
+            border-radius: 50%;
+        }
+
+        input:checked~.checkmark {
+            .checked-mark {
+                background-color: $input-color;
+            }
+        }
+    }
+
+    .input-container .in-l {
+        $input-container-wh: 60px;
+        position: absolute;
+        top: -18px;
+        left: -36px;
+
+        input {
+            width: $input-container-wh;
+            height: $input-container-wh;
+            opacity: 0;
+        }
+
+        .checkmark {
+            width: $input-container-wh;
+            height: $input-container-wh;
+            background-color: $input-color;
+            content: " ";
+            border-radius: 50%;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+
+        .checkmark .checked-mark {
+            position: absolute;
+            background-color: white;
+            content: " ";
+            width: $input-container-wh - 6;
+            height: $input-container-wh - 6;
+            margin: 3px 3px 3px 3px;
+            border-radius: 50%;
+        }
+
+        input:checked~.checkmark {
+            .checked-mark {
+                background-color: $input-color;
+            }
+        }
+    }
+}
+
+.answer-block.maybe {
+    $input-color: grey;
+
+    .answer-title {
+        color: $input-color;
+    }
+
+    .input-container .in-sm {
+        $input-container-wh: 40px;
+        position: absolute;
+        top: -6px;
+        left: -11px;
+
+        input {
+            width: $input-container-wh;
+            height: $input-container-wh;
+            opacity: 0;
+        }
+
+        .checkmark {
+            width: $input-container-wh;
+            height: $input-container-wh;
+            background-color: $input-color;
+            content: " ";
+            border-radius: 50%;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+
+        .checkmark .checked-mark {
+            position: absolute;
+            background-color: white;
+            content: " ";
+            width: $input-container-wh - 6;
+            height: $input-container-wh - 6;
+            margin: 3px 3px 3px 3px;
+            border-radius: 50%;
+        }
+
+        input:checked~.checkmark {
+            .checked-mark {
+                background-color: $input-color;
+            }
+        }
+    }
+
+    .input-container .in-m {
+        $input-container-wh: 50px;
+        position: absolute;
+        top: -13px;
+        left: -27px;
+
+
+
+        input {
+            width: $input-container-wh;
+            height: $input-container-wh;
+            opacity: 0;
+        }
+
+        .checkmark {
+            width: $input-container-wh;
+            height: $input-container-wh;
+            background-color: $input-color;
+            content: " ";
+            border-radius: 50%;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+
+        .checkmark .checked-mark {
+            position: absolute;
+            background-color: white;
+            content: " ";
+            width: $input-container-wh - 6;
+            height: $input-container-wh - 6;
+            margin: 3px 3px 3px 3px;
+            border-radius: 50%;
+        }
+
+        input:checked~.checkmark {
+            .checked-mark {
+                background-color: $input-color;
+            }
+        }
+    }
+
+    .input-container .in-l {
+        $input-container-wh: 60px;
+        position: absolute;
+        top: -18px;
+        left: -36px;
+
+        input {
+            width: $input-container-wh;
+            height: $input-container-wh;
+            opacity: 0;
+        }
+
+        .checkmark {
+            width: $input-container-wh;
+            height: $input-container-wh;
+            background-color: $input-color;
+            content: " ";
+            border-radius: 50%;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+
+        .checkmark .checked-mark {
+            position: absolute;
+            background-color: white;
+            content: " ";
+            width: $input-container-wh - 6;
+            height: $input-container-wh - 6;
+            margin: 3px 3px 3px 3px;
+            border-radius: 50%;
+        }
+
+        input:checked~.checkmark {
+            .checked-mark {
+                background-color: $input-color;
+            }
+        }
+    }
+}
+
+.answer-block.yes {
+    $input-color: green;
+
+    .answer-title {
+        color: $input-color;
+    }
+
+    .input-container .in-sm {
+        $input-container-wh: 40px;
+        position: absolute;
+        top: -6px;
+        left: -11px;
+
+        input {
+            width: $input-container-wh;
+            height: $input-container-wh;
+            opacity: 0;
+        }
+
+        .checkmark {
+            width: $input-container-wh;
+            height: $input-container-wh;
+            background-color: $input-color;
+            content: " ";
+            border-radius: 50%;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+
+        .checkmark .checked-mark {
+            position: absolute;
+            background-color: white;
+            content: " ";
+            width: $input-container-wh - 6;
+            height: $input-container-wh - 6;
+            margin: 3px 3px 3px 3px;
+            border-radius: 50%;
+        }
+
+        input:checked~.checkmark {
+            .checked-mark {
+                background-color: $input-color;
+            }
+        }
+    }
+
+    .input-container .in-m {
+        $input-container-wh: 50px;
+        position: absolute;
+        top: -13px;
+        left: -27px;
+
+
+
+        input {
+            width: $input-container-wh;
+            height: $input-container-wh;
+            opacity: 0;
+        }
+
+        .checkmark {
+            width: $input-container-wh;
+            height: $input-container-wh;
+            background-color: $input-color;
+            content: " ";
+            border-radius: 50%;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+
+        .checkmark .checked-mark {
+            position: absolute;
+            background-color: white;
+            content: " ";
+            width: $input-container-wh - 6;
+            height: $input-container-wh - 6;
+            margin: 3px 3px 3px 3px;
+            border-radius: 50%;
+        }
+
+        input:checked~.checkmark {
+            .checked-mark {
+                background-color: $input-color;
+            }
+        }
+    }
+
+    .input-container .in-l {
+        $input-container-wh: 60px;
+        position: absolute;
+        top: -18px;
+        left: -36px;
+
+        input {
+            width: $input-container-wh;
+            height: $input-container-wh;
+            opacity: 0;
+        }
+
+        .checkmark {
+            width: $input-container-wh;
+            height: $input-container-wh;
+            background-color: $input-color;
+            content: " ";
+            border-radius: 50%;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+
+        .checkmark .checked-mark {
+            position: absolute;
+            background-color: white;
+            content: " ";
+            width: $input-container-wh - 6;
+            height: $input-container-wh - 6;
+            margin: 3px 3px 3px 3px;
+            border-radius: 50%;
+        }
+
+        input:checked~.checkmark {
+            .checked-mark {
+                background-color: $input-color;
+            }
+        }
+    }
+}
+
+
+
+//KUIS
+.quiz hr {
+    border-top: 2px solid green;
+    margin: 0 auto 15px auto;
+    width: 80%;
+    box-shadow: none;
+}
+
+
+
+.QAB {
+    text-align: center;
+    display: none;
+}
+
+.box-active {
+    display: block !important;
+}
+
+.boxToggler {
+    padding: 20px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    color: white;
+    margin: 10px 0 70px 0;
+}
+
+.boxToggler .prev {
+    background-color: green;
+    position: absolute;
+    left: 0;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.boxToggler .next {
+    background-color: green;
+    position: absolute;
+    right: 0;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.disabled {
+    background-color: grey !important;
+}

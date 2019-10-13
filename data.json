@@ -1,0 +1,67 @@
+{
+    "questions": [{
+            "id": 1,
+            "qustion": "apakah otong mu sakit ?",
+            "answers": [
+
+                {
+                    "id": 1,
+                    "answer": "tidak pernah",
+                    "bobot": 0.2
+                },
+                {
+                    "id": 2,
+                    "answer": "netral",
+                    "bobot": 0.4
+                },
+                {
+                    "id": 3,
+                    "answer": "agak sering",
+                    "bobot": 0.6
+                },
+                {
+                    "id": 4,
+                    "answer": "sering",
+                    "bobot": 0.8
+                },
+                {
+                    "id": 5,
+                    "answer": "sangat sering",
+                    "bobot": 1
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "qustion": "apakah otong ke2 mu sakit ?",
+            "answers": [
+
+                {
+                    "id": 1,
+                    "answer": "tidak pernah",
+                    "bobot": 0.2
+                },
+                {
+                    "id": 2,
+                    "answer": "netral",
+                    "bobot": 0.4
+                },
+                {
+                    "id": 3,
+                    "answer": "agak sering",
+                    "bobot": 0.6
+                },
+                {
+                    "id": 4,
+                    "answer": "sering",
+                    "bobot": 0.8
+                },
+                {
+                    "id": 5,
+                    "answer": "sangat sering",
+                    "bobot": 1
+                }
+            ]
+        }
+    ]
+}
