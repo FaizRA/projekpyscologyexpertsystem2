@@ -709,3 +709,98 @@ html {
 .disabled {
     background-color: grey !important;
 }
+
+.result {
+    display: none;
+    margin: 80px auto;
+    position: relative;
+    max-width: 870px;
+
+    padding: 0;
+
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+
+    p.title {
+
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -50px;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+}
+
+.result .indikasi {
+    margin: 20px auto;
+    width: 400px;
+    height: 100px;
+    background-color: green;
+    display: flex;
+
+    .explanat {
+        width: 75%;
+        background-color: yellow;
+        display: flex;
+        flex-wrap: wrap;
+
+        p {
+            margin: 0;
+            padding: 5px;
+            color: white;
+            font-size: 0.95rem;
+        }
+    }
+
+    .persentage {
+        width: 25%;
+        background-color: grey;
+        display: flex;
+        flex-wrap: wrap;
+
+        p {
+
+            margin: 23px 16px;
+            font-size: 2rem;
+            color: white;
+        }
+    }
+}
+
+.result .final-indikasi {
+    margin: 20px auto;
+    width: 800px;
+    height: 100px;
+    background-color: rgb(255, 0, 0);
+
+    .final-explanat {
+        width: 50%;
+        background-color: yellow;
+        display: flex;
+        flex-wrap: wrap;
+
+        p {
+            margin: 0;
+            padding: 5px;
+            color: white;
+            font-size: 0.95rem;
+        }
+    }
+
+    .final-persentage {
+        width: 40%;
+        background-color: grey;
+        display: flex;
+        flex-wrap: wrap;
+
+        p {
+
+            margin: 23px 16px;
+            font-size: 2rem;
+            color: white;
+        }
+    }
+}

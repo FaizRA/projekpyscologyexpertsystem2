@@ -1,67 +1,225 @@
 {
     "questions": [{
             "id": 1,
-            "qustion": "apakah otong mu sakit ?",
-            "answers": [
-
-                {
-                    "id": 1,
-                    "answer": "tidak pernah",
-                    "bobot": 0.2
-                },
-                {
-                    "id": 2,
-                    "answer": "netral",
-                    "bobot": 0.4
-                },
-                {
-                    "id": 3,
-                    "answer": "agak sering",
-                    "bobot": 0.6
-                },
-                {
-                    "id": 4,
-                    "answer": "sering",
-                    "bobot": 0.8
-                },
-                {
-                    "id": 5,
-                    "answer": "sangat sering",
-                    "bobot": 1
-                }
-            ]
+            "qustion": "Sering mengalami kebingungan/disorientasi",
+            "kategori": "Delirium",
+            "bobot": 0.9
         },
         {
             "id": 2,
-            "qustion": "apakah otong ke2 mu sakit ?",
-            "answers": [
-
-                {
-                    "id": 1,
-                    "answer": "tidak pernah",
-                    "bobot": 0.2
-                },
-                {
-                    "id": 2,
-                    "answer": "netral",
-                    "bobot": 0.4
-                },
-                {
-                    "id": 3,
-                    "answer": "agak sering",
-                    "bobot": 0.6
-                },
-                {
-                    "id": 4,
-                    "answer": "sering",
-                    "bobot": 0.8
-                },
-                {
-                    "id": 5,
-                    "answer": "sangat sering",
-                    "bobot": 1
-                }
-            ]
+            "qustion": "Bicara kacau",
+            "kategori": "Delirium",
+            "bobot": 0.8
+        },
+        {
+            "id": 3,
+            "qustion": "Gelisah",
+            "kategori": "Delirium",
+            "bobot": 0.6
+        },
+        {
+            "id": 4,
+            "qustion": "Mudah marah/tersinggung",
+            "kategori": "Delirium",
+            "bobot": 0.4
+        },
+        {
+            "id": 5,
+            "qustion": "Disertai penyakit fisik (demam, pusing, sesak napas, nyeri dada, keringat dingin)",
+            "kategori": "Delirium",
+            "bobot": 0.2
+        },
+        {
+            "id": 6,
+            "qustion": "Sering mengalami lupa, terutama memori jangka pendek",
+            "kategori": "Demensia",
+            "bobot": 0.9
+        },
+        {
+            "id": 7,
+            "qustion": "Mudah bingung (biasanya ditandai dengan pergi dari rumah dan lupa jalan pulang)",
+            "kategori": "Demensia",
+            "bobot": 0.8
+        },
+        {
+            "id": 8,
+            "qustion": "Kebersihan pribadi buruk",
+            "kategori": "Demensia",
+            "bobot": 0.6
+        },
+        {
+            "id": 9,
+            "qustion": "Kehilangan kendali emosi",
+            "kategori": "Demensia",
+            "bobot": 0.4
+        },
+        {
+            "id": 10,
+            "qustion": "Sering mengulang kata-kata dan pertanyaan",
+            "kategori": "Demensia",
+            "bobot": 0.2
+        },
+        {
+            "id": 11,
+            "qustion": "Waham (pikiran-pikiran yang menyebabkan merasa dirinya dikendalikan sesuatu dari luar)",
+            "kategori": "Gangguan Psikotik akut dan Skizofrenia",
+            "bobot": 0.9
+        },
+        {
+            "id": 12,
+            "qustion": "Halusinasi (kesalahan persepsi dimana penderita mendengar/merasa/melihat/mencium sesuatu yang tidak ada objeknya)",
+            "kategori": "Gangguan Psikotik akut dan Skizofrenia",
+            "bobot": 0.8
+        },
+        {
+            "id": 13,
+            "qustion": "Pembicaraan yang tidak terangkai karena proses berpikir yang terganggu",
+            "kategori": "Gangguan Psikotik akut dan Skizofrenia",
+            "bobot": 0.6
+        },
+        {
+            "id": 14,
+            "qustion": "Gelisah, melakukan tindakan agresivitas",
+            "kategori": "Gangguan Psikotik akut dan Skizofrenia",
+            "bobot": 0.4
+        },
+        {
+            "id": 15,
+            "qustion": "Menarik Diri",
+            "kategori": "Gangguan Psikotik akut dan Skizofrenia",
+            "bobot": 0.2
+        },
+        {
+            "id": 16,
+            "qustion": "Suasana hati sedih/murung yang kurang jelas sebabnya apa dan berlangsung setiap hari",
+            "kategori": "Gangguan Depresi",
+            "bobot": 0.9
+        },
+        {
+            "id": 17,
+            "qustion": "Kehilangan minat pada kegiatan yang membuat bahagia",
+            "kategori": "Gangguan Depresi",
+            "bobot": 0.8
+        },
+        {
+            "id": 18,
+            "qustion": "Kehilangan minat pada kegiatan yang membuat bahagia",
+            "kategori": "Gangguan Depresi",
+            "bobot": 0.6
+        },
+        {
+            "id": 19,
+            "qustion": "Kurangnya konsentrasi",
+            "kategori": "Gangguan Depresi",
+            "bobot": 0.2
+        },
+        {
+            "id": 20,
+            "qustion": "Harga diri dan kepercayaan berkurang",
+            "kategori": "Gangguan Depresi",
+            "bobot": 0.2
+        },
+        {
+            "id": 21,
+            "qustion": "Perasaan dirinya tidak berguna",
+            "kategori": "Gangguan Depresi",
+            "bobot": 0.2
+        },
+        {
+            "id": 22,
+            "qustion": "Pesimis",
+            "kategori": "Gangguan Depresi",
+            "bobot": 0.2
+        },
+        {
+            "id": 23,
+            "qustion": "Membahayakan/menyakiti diri sendiri",
+            "kategori": "Gangguan Depresi",
+            "bobot": 0.2
+        },
+        {
+            "id": 24,
+            "qustion": "Pola tidur terganggu",
+            "kategori": "Gangguan Depresi",
+            "bobot": 0.2
+        },
+        {
+            "id": 25,
+            "qustion": "Nafsu makan berkurang/bertambah",
+            "kategori": "Gangguan Depresi",
+            "bobot": 0.2
+        },
+        {
+            "id": 26,
+            "qustion": "Suasana hati bahagia (euforia)",
+            "kategori": "Gangguan Afektif Bipolar",
+            "bobot": 0.9
+        },
+        {
+            "id": 27,
+            "qustion": "Mudah tersinggung/marah",
+            "kategori": "Gangguan Afektif Bipolar",
+            "bobot": 0.8
+        },
+        {
+            "id": 28,
+            "qustion": "Banyak bicara",
+            "kategori": "Gangguan Afektif Bipolar",
+            "bobot": 0.6
+        },
+        {
+            "id": 29,
+            "qustion": "Banyak ide, banyak aktifitas (melompat-lompat)",
+            "kategori": "Gangguan Afektif Bipolar",
+            "bobot": 0.4
+        },
+        {
+            "id": 30,
+            "qustion": "Perhatiannya mudah teralih",
+            "kategori": "Gangguan Afektif Bipolar",
+            "bobot": 0.2
+        },
+        {
+            "id": 31,
+            "qustion": "Banyak keinginan untuk beraktifitas",
+            "kategori": "Gangguan Afektif Bipolar",
+            "bobot": 0.2
+        },
+        {
+            "id": 32,
+            "qustion": "Nyeri Dada",
+            "kategori": "Gangguan Panik",
+            "bobot": 0.9
+        },
+        {
+            "id": 33,
+            "qustion": "Merasa seperti tercekik",
+            "kategori": "Gangguan Panik",
+            "bobot": 0.8
+        },
+        {
+            "id": 34,
+            "qustion": "Merasa perut seperti terbakar",
+            "kategori": "Gangguan Panik",
+            "bobot": 0.6
+        },
+        {
+            "id": 35,
+            "qustion": "Pusing",
+            "kategori": "Gangguan Panik",
+            "bobot": 0.4
+        },
+        {
+            "id": 36,
+            "qustion": "Adanya perasaan tidak nyata",
+            "kategori": "Gangguan Panik",
+            "bobot": 0.2
+        },
+        {
+            "id": 37,
+            "qustion": "Merasa akan terjadi sesuatu yang tidak menyenangkan pada dirinya",
+            "kategori": "Gangguan Panik",
+            "bobot": 0.2
         }
     ]
 }
