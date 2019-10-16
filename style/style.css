@@ -10,9 +10,15 @@ html {
   -ms-overflow-style: scrollbar;
 }
 
+input {
+  cursor: pointer;
+}
+
 * {
   padding: 0;
   margin: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 *,
@@ -5250,6 +5256,7 @@ a.text-dark:hover, a.text-dark:focus {
 .info-card .text p {
   margin: 20px 20px;
   font-size: 1.2em;
+  text-align: center;
 }
 
 .pBar-container .indicator,
@@ -5797,7 +5804,6 @@ a.text-dark:hover, a.text-dark:focus {
   margin: 20px auto;
   width: 400px;
   height: 100px;
-  background-color: green;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5805,7 +5811,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .result .indikasi .explanat {
   width: 75%;
-  background-color: yellow;
+  background-color: green;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5817,7 +5823,9 @@ a.text-dark:hover, a.text-dark:focus {
   margin: 0;
   padding: 5px;
   color: white;
-  font-size: 0.95rem;
+  font-size: 1.3rem;
+  text-align: left;
+  font-weight: bold;
 }
 
 .result .indikasi .persentage {
@@ -5855,7 +5863,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .result .final-indikasi .final-explanat p {
   margin: 0;
-  padding: 5px;
+  padding: 10px;
   color: white;
   font-size: 0.95rem;
 }
@@ -5874,5 +5882,9 @@ a.text-dark:hover, a.text-dark:focus {
   margin: 23px 16px;
   font-size: 2rem;
   color: white;
+}
+
+.warningbox {
+  background-color: red !important;
 }
 /*# sourceMappingURL=style.css.map */

@@ -45,7 +45,7 @@ $(function () {
 
             for (i = 1; i <= QApages; i++) {
 
-                $('#QA').append(['<div class="QAB box-' + i + '" id="quis"> ' + i + ' </div>']);
+                $('#QA').append(['<div class="QAB box-' + i + '" id="quis"> <h3>' + i + ' from ' + QApages + '</h3> </div>']);
             }
 
             let Pagebox = 1;
@@ -277,6 +277,7 @@ $(function () {
             console.log(currentPage);
 
             $('#BNext').on('click', function () {
+                window.location.href = '#QA';
                 if (currentPage < QApages) {
                     $('#BPrev').removeClass('disabled');
                     $('.box-' + currentPage).removeClass('box-active');
@@ -496,6 +497,64 @@ $(function () {
 
                         }
 
+                        var bes1 = 0;
+                        var bes2 = 0;
+
+                        for (kis = 1; kis < hasileng; kis++) {
+                            if (kis == 1) {
+                                bes1 = soc[kis - 1].hasil;
+
+                                if (bes1 <= soc[kis].hasil) {
+                                    bes2 = soc[kis].hasil
+
+                                } else {
+                                    bes2 = bes1
+
+                                }
+                            } else {
+                                if (bes2 <= soc[kis].hasil) {
+                                    bes2 = soc[kis].hasil
+
+                                } else {
+                                    bes2 = bes2
+
+                                }
+                            }
+                        }
+
+                        console.log(bes2);
+
+                        var idsimp = 0;
+
+                        for (kuss = 0; kuss < hasileng; kuss++) {
+                            if (soc[kuss].hasil != bes2) {
+                                idsimp = +1;
+                            } else {
+                                idsimp = +1;
+                                break;
+                            }
+                        }
+
+                        console.log(idsimp)
+
+                        roundedhasilfinal = Math.round(soc[idsimp].hasil * 100);
+
+
+
+
+                        $('.result').append(
+                            [
+                                '<div class="indikasi warningbox" style="width:100%">',
+                                '<div class="explanat warningbox" style="width:80%">',
+                                '<p class="indikasi">' + soc[idsimp].penyakit + '</p>',
+                                '</div>',
+                                '<div class="persentage" style="width:20%">',
+                                '<p class="persentage">' + roundedhasilfinal + '%</p>',
+                                '</div>',
+                                '</div>'
+                            ].join('')
+                        );
+
 
 
 
@@ -535,6 +594,7 @@ $(function () {
             })
 
             $('#BPrev').on('click', function () {
+                window.location.href = '#QA';
                 if (currentPage - 1 === 1) {
                     $('.box-' + currentPage).removeClass('box-active');
                     currentPage = currentPage - 1;

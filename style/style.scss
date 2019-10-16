@@ -10,9 +10,14 @@ html {
     -ms-overflow-style: scrollbar;
 }
 
+input {
+    cursor: pointer;
+}
+
 * {
     padding: 0;
     margin: 0;
+    transition: 1s;
 }
 
 *,
@@ -129,6 +134,7 @@ html {
 
     margin: 20px 20px;
     font-size: 1.2em;
+    text-align: center;
 
 }
 
@@ -738,12 +744,11 @@ html {
     margin: 20px auto;
     width: 400px;
     height: 100px;
-    background-color: green;
     display: flex;
 
     .explanat {
         width: 75%;
-        background-color: yellow;
+        background-color: green;
         display: flex;
         flex-wrap: wrap;
 
@@ -751,7 +756,9 @@ html {
             margin: 0;
             padding: 5px;
             color: white;
-            font-size: 0.95rem;
+            font-size: 1.3rem;
+            text-align: left;
+            font-weight: bold;
         }
     }
 
@@ -784,7 +791,7 @@ html {
 
         p {
             margin: 0;
-            padding: 5px;
+            padding: 10px;
             color: white;
             font-size: 0.95rem;
         }
@@ -803,4 +810,8 @@ html {
             color: white;
         }
     }
+}
+
+.warningbox {
+    background-color: red !important;
 }
