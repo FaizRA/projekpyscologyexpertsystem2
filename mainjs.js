@@ -528,9 +528,9 @@ $(function () {
 
                         for (kuss = 0; kuss < hasileng; kuss++) {
                             if (soc[kuss].hasil != bes2) {
-                                idsimp = +1;
+                                idsimp = idsimp + 1;
                             } else {
-                                idsimp = +1;
+
                                 break;
                             }
                         }
