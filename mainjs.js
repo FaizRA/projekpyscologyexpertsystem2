@@ -55,12 +55,12 @@ $(function () {
             let value1 = 1;
             let value2 = 0.8;
             let value3 = 0.6;
-            let value4 = 0.4;
-            let value5 = 0.2;
-            let value6 = -0.2;
-            let value7 = -0.4;
-            let value8 = -0.6;
-            let value9 = -0.8;
+            //  let value4 = 0.4;
+            let value5 = 0;
+            // let value6 = -0.2;
+            let value7 = -0.6;
+            let value8 = -0.8;
+            let value9 = -1;
 
             for (j = 0; j < qaCount; j++) {
 
@@ -118,14 +118,7 @@ $(function () {
                         '<div class="answer-title">',
                         '<p>Mungkin</p>',
                         '</div>',
-                        '<div class="input-container">',
-                        '<div class="in-sm">',
-                        '<input type="radio" id="optiona" name="option' + j + '" value="' + value6 + '">',
-                        '<div class="checkmark">',
-                        '<div class="checked-mark"></div>',
-                        '</div>',
-                        '</div>',
-                        '</div>',
+
                         '<div class="input-container">',
                         '<div class="in-m">',
                         '<input type="radio" id="optiona" name="option' + j + '" value="' + value5 + '">',
@@ -134,14 +127,7 @@ $(function () {
                         '</div>',
                         '</div>',
                         '</div>',
-                        '<div class="input-container">',
-                        '<div class="in-l">',
-                        '<input type="radio" id="optiona" name="option' + j + '" value="' + value4 + '">',
-                        '<div class="checkmark">',
-                        '<div class="checked-mark"></div>',
-                        '</div>',
-                        '</div>',
-                        '</div>',
+
                         '</div>',
                         '<div class="answer-block yes">',
                         '<div class="answer-title">',

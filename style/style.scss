@@ -85,55 +85,59 @@ input {
     margin: auto;
 }
 
-.info-card {
-    display: inline-block;
-    position: relative;
-    width: 250px;
-    background-color: rgba(190, 187, 187, 0.75);
-    margin: 10px 20px;
-    padding: 10px;
-    border-radius: 10%;
-}
-
-
-@media (max-width: 991px) {
-
+.container.info {
     .info-card {
         display: inline-block;
         position: relative;
-        width: 200px;
-
-        margin: 10px 10px;
+        width: 250px;
+        background-color: rgba(190, 187, 187, 0.75);
+        margin: 10px 20px;
+        padding: 10px;
         border-radius: 10%;
     }
-}
 
-@media (max-width: 767px) {
 
-    .info-card {
-        display: block;
-        position: relative;
-        width: 100%;
+    @media (max-width: 991px) {
 
+        .info-card {
+            display: inline-block;
+            position: relative;
+            width: 200px;
+
+            margin: 10px 10px;
+            border-radius: 10%;
+        }
+    }
+
+    @media (max-width: 767px) {
+
+        .info-card {
+            display: block;
+            position: relative;
+            width: 100%;
+
+            margin: 10px 0;
+            border-radius: 10%;
+        }
+    }
+
+    .info-card .image {
+        display: flex;
         margin: 10px 0;
-        border-radius: 10%;
     }
+
+    .info-card img {
+        width: 100px;
+        margin: 10px auto;
+    }
+
 }
 
-.info-card .image {
-    display: flex;
-    margin: 10px 0;
-}
-
-.info-card img {
-    width: 100px;
-    margin: 10px auto;
-}
 
 .info-card .text p {
 
     margin: 20px 20px;
-    font-size: 1.2em;
+    font-size: 0.9em;
     text-align: center;
 
 }
@@ -232,11 +236,13 @@ input {
 
 .answer .answer-title {
     position: absolute;
-    left: 50%;
+    left: 49%;
     transform: translateX(-50%);
     top: -25px;
     font-weight: bold;
 }
+
+
 
 /*
 .content .answer .answer-block.yes {
@@ -672,7 +678,9 @@ input {
     border-top: 2px solid green;
     margin: 0 auto 15px auto;
     width: 80%;
+    -webkit-box-shadow: none;
     box-shadow: none;
+
 }
 
 
@@ -747,7 +755,7 @@ input {
     display: flex;
 
     .explanat {
-        width: 75%;
+        width: 70%;
         background-color: green;
         display: flex;
         flex-wrap: wrap;
@@ -763,7 +771,7 @@ input {
     }
 
     .persentage {
-        width: 25%;
+        width: 30%;
         background-color: grey;
         display: flex;
         flex-wrap: wrap;
@@ -773,6 +781,10 @@ input {
             margin: 23px 16px;
             font-size: 2rem;
             color: white;
+            position: relative;
+            top: 30%;
+            transform: translateY(-50%);
+            left: 0px;
         }
     }
 }
@@ -814,4 +826,51 @@ input {
 
 .warningbox {
     background-color: red !important;
+}
+
+.container.guide {
+    margin: auto;
+
+    .info-card {
+        display: inline-block;
+        position: relative;
+        width: 80%;
+        background-color: rgba(190, 187, 187, 0.75);
+        margin: auto;
+        top: -22px;
+        left: 49%;
+        padding: 10px;
+        font-weight: bold;
+        transform: translateX(-50%);
+
+    }
+}
+
+@media (min-width: 992px) {
+
+    .content .quiz {
+
+        position: relative;
+        left: 13.2px;
+    }
+
+    .answer-block.no {
+        right: -78px;
+        z-index: 2;
+    }
+
+    .answer-block.yes {
+        left: -106px;
+        z-index: 2;
+    }
+
+    .quiz hr {
+
+        position: relative;
+        left: -15px;
+    }
+
+    .boxToggler {
+        z-index: 2;
+    }
 }
